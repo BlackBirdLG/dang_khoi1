@@ -1,0 +1,15 @@
+n = 0
+while True:
+    s = input("Nhập nhật ký giao dịch: ")
+    if not s:
+        break
+    so_tien = s.split(" ")
+    lenh = so_tien[0]
+    m = int(so_tien[1])
+    if lenh=="D":
+        n+=m
+    elif lenh=="W":
+        n-=m
+    else:
+        pass
+print (n)

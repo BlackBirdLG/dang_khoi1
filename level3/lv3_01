@@ -1,0 +1,22 @@
+passwords=list(input("nhập một chuỗi mật khẩu: ").split(','))
+valid=[]
+for password in passwords:
+    if len(password)<6 or len(password)>12:
+        continue
+    has_lower = False
+    has_upper = False
+    has_digit = False
+    has_special = False
+
+    for chu in password:
+        if 'a' <= chu <= 'z':
+            has_lower = True
+        elif 'A' <= chu <= 'Z':
+            has_upper = True
+        elif '0' <= chu <= '9':
+            has_digit = True
+        elif chu in "$#@":
+            has_special = True
+    if has_lower and has_upper and has_digit and has_special:
+        valid.append(password)
+print(','.join(valid))

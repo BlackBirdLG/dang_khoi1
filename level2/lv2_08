@@ -1,0 +1,12 @@
+def count_number(str):
+    so_chu_cai=0
+    so_chu_so=0
+    for ky_tu in str:
+        if ky_tu.isalpha():
+            so_chu_cai+=1
+        elif ky_tu.isdigit():
+            so_chu_so+=1
+        return so_chu_cai, so_chu_so
+m=input("nhập một chuỗi: ")
+chu, so=count_number(m)
+print(f"Số chữ cái là: {chu}, số chữ số là: {so}")

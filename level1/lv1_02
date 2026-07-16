@@ -1,0 +1,7 @@
+m=int(input("enter a number: "))
+n=1
+k=1
+while n<m+1:
+    k*=n
+    n+=1
+print(k)

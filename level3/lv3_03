@@ -1,0 +1,10 @@
+def chia_het_cho7(n):
+    i=0
+    while i<n:
+        j=i
+        i+=1
+        if j%7==0:
+            yield j
+k=int(input("enter a number: "))
+for i in chia_het_cho7(k):
+    print(i)

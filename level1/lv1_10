@@ -1,0 +1,6 @@
+hours=int(input("nhập số giờ làm: "))
+salary=int(input("nhập lương cơ bản mỗi giờ: "))
+if hours<45:
+    print(hours*salary)
+else:
+    print((hours-44)*1.5*salary+44*salary)

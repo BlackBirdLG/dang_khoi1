@@ -1,0 +1,29 @@
+# In tài liệu về hàm abs()
+print("Tài liệu của hàm abs()")
+print(abs.__doc__)
+print("\n")
+
+# In tài liệu về hàm int()
+print("Tài liệu của hàm int()")
+print(int.__doc__)
+print("\n")
+
+# In tài liệu về hàm input()
+print("Tài liệu của hàm input()")
+print(input.__doc__)
+print("\n")
+
+# Tự định nghĩa hàm và thêm tài liệu:
+def tinh_dien_tich_hinh_chu_nhat(dai, rong):
+    """Hàm này dùng để tính diện tích hình chữ nhật
+
+    Tham số:
+    dai (float/int): Chiều dài của hình chữ nhật
+    rong (float/int): Chiều rộng của hình chữ nhật
+
+    Trả về:
+    float/int: Diện tích của hình chữ nhật
+    """
+    return dai * rong
+print("Tài liệu hàm tự định nghĩa")
+print(tinh_dien_tich_hinh_chu_nhat.__doc__)

@@ -1,0 +1,3 @@
+m=input("enter a string: ")
+k=m.upper()
+print(k)

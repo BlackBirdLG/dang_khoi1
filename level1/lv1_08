@@ -1,0 +1,19 @@
+class Chuyen_tin:
+    ten_lop = "lớp 12A1 Tin" 
+
+    def __init__(self, ten, chuc_vu):
+        # Tham số instance (dữ liệu riêng của từng hoc sinh)
+        self.ten = ten
+        self.chuc_vu = chuc_vu
+
+# Khởi tạo các instances
+nv1 = Chuyen_tin("Lê Hoàng Gia Bảo", "Lớp trưởng")
+nv2 = Chuyen_tin("Phạm Đăng Khôi", "Bí thư")
+
+# Truy suất instance
+print(nv1.ten_lop)
+print(nv2.ten_lop) 
+
+# Truy xuất instance
+print(nv1.ten) 
+print(nv2.ten) 

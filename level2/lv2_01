@@ -1,0 +1,4 @@
+import math
+d=list(map(int, input("nhập một chuỗi số: ").split(',')))
+m=[round(math.sqrt(2*50*num/30)) for num in d]
+print(m)

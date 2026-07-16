@@ -1,0 +1,5 @@
+lst=input("enter a list of words: ")
+lst1=lst.split(',')
+tpl=tuple(lst1)
+print(lst1)
+print(tpl)

@@ -1,0 +1,7 @@
+tan_suat={}
+m=input("nhập chuỗi: ")
+for word in m.split():
+    tan_suat[word]=tan_suat.get(word, 0)+1
+words=sorted(tan_suat.keys())
+for n in words:
+    print("%s: %d" %(n,tan_suat[n]))

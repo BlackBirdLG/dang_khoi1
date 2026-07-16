@@ -1,0 +1,21 @@
+import math
+n = 0
+k=0
+while True:
+    s = input("Nhập lệnh di chuyển: ")
+    if not s:
+        break
+    so_buoc = s.split(" ")
+    lenh = so_buoc[0]
+    m = int(so_buoc[1])
+    if lenh=="UP":
+        n+=m
+    elif lenh=="DOWN":
+        n-=m
+    elif lenh=="LEFT":
+        k+=m
+    elif lenh=="RIGHT":
+        k-=m
+    else:
+        pass
+print (round(math.sqrt(n**2+k**2)))

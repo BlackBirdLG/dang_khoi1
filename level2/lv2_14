@@ -1,0 +1,36 @@
+import numpy as np
+
+m = int(input("Nhập số hàng m: "))
+n = int(input("Nhập số cột n: "))
+
+print("Nhập các phần tử cho mảng A:")
+A = []
+for i in range(m):
+    row = []
+    for j in range(n):
+        row.append(float(input(f"A[{i}][{j}] = ")))
+    A.append(row)
+
+A = np.array(A)
+print("\nMảng A vừa nhập:")
+print(A)
+
+#a. Tìm giá trị lớn nhất, nhỏ nhất mỗi cột
+max_cot = np.amax(A, axis=0)
+min_cot = np.amin(A, axis=0)
+print("\na. Giá trị lớn nhất trên mỗi cột:", max_cot)
+print("   Giá trị nhỏ nhất trên mỗi cột:", min_cot)
+
+#b. Tìm số lớn nhất và nhỏ nhất của mảng và chỉ số
+max_val = np.amax(A)
+max_idx = np.unravel_index(np.argmax(A), A.shape)
+
+min_val = np.amin(A)
+min_idx = np.unravel_index(np.argmin(A), A.shape)
+
+print("\nb. Phần tử lớn nhất toàn mảng:", max_val, f"tại hàng {max_idx[0]}, cột {max_idx[1]}")
+print("   Phần tử nhỏ nhất toàn mảng:", min_val, f"tại hàng {min_idx[0]}, cột {min_idx[1]}")
+
+#c. Số phần tử bằng phần tử lớn nhất
+so_luong_max = np.sum(A == max_val)
+print(f"\nc. Số phần tử bằng phần tử lớn nhất ({max_val}) là: {so_luong_max}")

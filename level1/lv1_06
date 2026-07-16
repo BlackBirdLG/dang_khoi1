@@ -1,0 +1,2 @@
+m=int(input("enter a number: "))
+print(m**2)

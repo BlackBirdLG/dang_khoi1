@@ -1,0 +1,22 @@
+from datetime import datetime
+
+def tinh_tuoi(ngay_sinh_str):
+    # Chuyển đổi chuỗi ngày sinh thành đối tượng datetime
+    ngay_sinh = datetime.strptime(ngay_sinh_str, "%Y/%m/%d")
+    
+    # Lấy ngày tháng năm hiện tại
+    hom_nay = datetime.now()
+    
+    # Tính tuổi bằng cách lấy năm hiện tại trừ đi năm sinh
+    tuoi = hom_nay.year - ngay_sinh.year
+    
+    # Kiểm tra xem sinh nhật năm nay đã diễn ra chưa
+    # Nếu chưa, trừ đi 1 tuổi
+    if (hom_nay.month, hom_nay.day) < (ngay_sinh.month, ngay_sinh.day):
+        tuoi -= 1
+        
+    return tuoi
+
+# Ví dụ kiểm tra
+ngay_sinh=input("nhap ngay sinh: ")
+print(f"Tuổi của bạn là: {tinh_tuoi(ngay_sinh)}")

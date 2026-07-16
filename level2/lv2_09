@@ -1,0 +1,14 @@
+cau = input("Nhập vào một câu: ")
+
+def ky_tu(cau):
+    chu_hoa = 0
+    chu_thuong = 0
+    for ky_tu in cau:
+        if ky_tu.isupper():
+            chu_hoa+=1
+        elif ky_tu.islower():
+            chu_thuong+=1
+    return chu_hoa, chu_thuong
+chu_hoa, chu_thuong=ky_tu(cau)
+print(f"Chữ hoa: {chu_hoa}")
+print(f"Chữ thường: {chu_thuong}")
